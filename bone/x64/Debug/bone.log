@@ -1,0 +1,17 @@
+﻿生成启动时间为 2014/7/26 19:18:10。
+     1>项目“d:\用户目录\我的文档\visual studio 2013\Projects\dog\bone\bone.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TC /errorReport:prompt sqlite.c
+         sqlite.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bone.lib" /NOLOGO /MACHINE:X64 x64\Debug\log.obj
+         x64\Debug\shell.obj
+         x64\Debug\sqlite.obj
+         x64\Debug\sqlite3.obj
+         x64\Debug\time.obj
+         bone.vcxproj -> d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bone.lib
+     1>已完成生成项目“d:\用户目录\我的文档\visual studio 2013\Projects\dog\bone\bone.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.19

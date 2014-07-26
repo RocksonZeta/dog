@@ -1,0 +1,13 @@
+﻿生成启动时间为 2014/7/26 19:16:44。
+     1>项目“d:\用户目录\我的文档\visual studio 2013\Projects\dog\bark\bark.vcxproj”在节点 3 上(Build 个目标)。
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bark.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bark.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bark.lib" /MACHINE:X64 "d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bone.lib"
+         "d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\dog.lib"
+     1>LINK : warning LNK4001: 未指定对象文件；已使用库
+     1>LINK : error LNK2001: 无法解析的外部符号 mainCRTStartup
+     1>d:\用户目录\我的文档\visual studio 2013\Projects\dog\x64\Debug\bark.exe : fatal error LNK1120: 1 个无法解析的外部命令
+     1>已完成生成项目“d:\用户目录\我的文档\visual studio 2013\Projects\dog\bark\bark.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.16
