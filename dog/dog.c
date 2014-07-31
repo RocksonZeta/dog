@@ -5,22 +5,8 @@
 HHOOK hHook = NULL;
 LRESULT WINAPI KeyboardProc(int code, WPARAM wParam, LPARAM lParam)
 {
-
 	char info[100] = { 0 };
 	sprintf_s(info, 100, "code:%d,wp:%d,lp:%d\n", code, wParam, lParam);
-	/*
-	if (HCBT_CREATEWND == code){
-		LPCREATESTRUCT p = (LPCREATESTRUCT)lParam;
-		log(p->lpszName);
-	}
-	if (HCBT_ACTIVATE == code){
-		HWND hwnd = (HWND)wParam;
-		wchar_t title[30];
-		GetWindowTextW(hwnd, title, 30);
-		LPCREATESTRUCT p = (LPCREATESTRUCT)lParam;
-		log(title);
-	}
-	*/
 	if (HSHELL_WINDOWACTIVATED == code){
 		HWND hwnd = (HWND)wParam;
 		wchar_t title[30];
