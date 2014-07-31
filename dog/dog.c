@@ -8,6 +8,7 @@ LRESULT WINAPI KeyboardProc(int code, WPARAM wParam, LPARAM lParam)
 
 	char info[100] = { 0 };
 	sprintf_s(info, 100, "code:%d,wp:%d,lp:%d\n", code, wParam, lParam);
+	/*
 	if (HCBT_CREATEWND == code){
 		LPCREATESTRUCT p = (LPCREATESTRUCT)lParam;
 		log(p->lpszName);
@@ -19,6 +20,13 @@ LRESULT WINAPI KeyboardProc(int code, WPARAM wParam, LPARAM lParam)
 		LPCREATESTRUCT p = (LPCREATESTRUCT)lParam;
 		log(title);
 	}
+	*/
+	if (HSHELL_WINDOWACTIVATED == code){
+		HWND hwnd = (HWND)wParam;
+		wchar_t title[30];
+		GetWindowText(hwnd, title, 30);
+		wlog(title);
+	}
 	log(info);
 
 	return CallNextHookEx(hHook, code, wParam, lParam);
@@ -27,7 +35,7 @@ _declspec(dllexport) int SetHook()
 {
 	printf("set %d hook yeah\n", sizeof(void*)* 8);
 	log("set hook\n");
-	hHook = SetWindowsHookEx(WH_CBT, KeyboardProc, GetModuleHandleA("dog.dll"), 0);
+	hHook = SetWindowsHookEx(WH_SHELL, KeyboardProc, GetModuleHandleA("dog.dll"), 0);
 	if (hHook == NULL)
 	{
 		printf("SetWindowsHookEx() error :%d\n", GetLastError());

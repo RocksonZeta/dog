@@ -15,7 +15,7 @@ void init_db(){
 		return ;
 	}
 	printf("Open database success \n");
-
+	init_schema();
 
 }
 
@@ -29,7 +29,7 @@ void close_db(){
 
 
 void init_schema(){
-	const char* table_message = "drop table if exists messages;create table messages(id int primary key  auto_increment, app_name varchar(100),win_name varchar(100),`at` bigint );";
+	const char* table_message = "create table if not exists messages(id integer primary key  autoincrement, app_name varchar(100),win_name varchar(100),`at` bigint );";
 	char *e = 0;
 	int r = 0;
 	printf("%s\n", table_message);
@@ -43,23 +43,34 @@ void init_schema(){
 void save_message(message m){
 	int r = 0;
 	char *e = 0;
-	char* sql_tpl = "insert messages (app_name,win_name,`at`) values (%s,%s,%l)";
-	char sql[sizeof(message) + 58] = { 0 };
-	sprintf_s(sql, sizeof(message)+58, sql_tpl, m.app_name, m.win_name, m.at);
+	char sql_tpl[] = "insert into messages (app_name,win_name,`at`) values ('%s','%s',%d)";
+	char sql[sizeof(message)+sizeof(sql_tpl) / sizeof(sql_tpl[0])] = { 0 };
+	sprintf_s(sql, sizeof(message)+sizeof(sql_tpl) / sizeof(sql_tpl[0]), sql_tpl, m.app_name, m.win_name, m.at);
 	r = sqlite3_exec(db, sql, NULL, NULL, &e);
+	if (e){
+		printf("exec sql error,sql:%s error:%s\n",sql, e);
+	}
+	else{
+		printf("%s\n", sql);
+	}
 
-	#ifdef DEBUG
-	printf("sql %s\n", r == SQLITE_OK ? "OK" : "FAIL");
-	#endif // DEBUG
 }
 
 message* get_messages(char type){
-	char * sql_tpl = "select * from messages where ";
-	if (0 == type){
-		return NULL;
+	char * sql = "select * from messages";
+	char** result = 0;		//二维数组存放结果 
+	int nrow, ncol;
+	int i = 0,j=0;
+	char* e = 0;
+	sqlite3_get_table(db, sql, &result, &nrow, &ncol,&e);
+	printf("row:%d column=%d \n", nrow, ncol);
+	for (i = 0; i < (nrow + 1) * ncol; i++){
+		printf("%-10s", result[i]);
+		if (0 == (i+1)%(ncol)){
+			printf("\n");
+		}
 	}
-
-
+	sqlite3_free_table(result);
 	return NULL;
 
 }
