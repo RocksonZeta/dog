@@ -1,8 +1,12 @@
-﻿生成启动时间为 2014/7/31 17:42:29。
+﻿生成启动时间为 2014/8/1 13:25:37。
      1>项目“d:\用户目录\我的文档\visual studio 2013\Projects\dog\bone\bone.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt sqlite.c
-         sqlite.c
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt log.c
+         log.c
+     1>d:\用户目录\我的文档\visual studio 2013\projects\dog\bone\log.c(10): warning C4047: “函数”:“DWORD”与“void *”的间接级别不同
+     1>d:\用户目录\我的文档\visual studio 2013\projects\dog\bone\log.c(10): warning C4024: “WideCharToMultiByte”: 形参和实参 2 的类型不同
+     1>d:\用户目录\我的文档\visual studio 2013\projects\dog\bone\log.c(15): warning C4047: “函数”:“DWORD”与“void *”的间接级别不同
+     1>d:\用户目录\我的文档\visual studio 2013\projects\dog\bone\log.c(15): warning C4024: “WideCharToMultiByte”: 形参和实参 2 的类型不同
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"d:\用户目录\我的文档\visual studio 2013\Projects\dog\Debug\bone.lib" /NOLOGO Debug\log.obj
          Debug\shell.obj
@@ -14,4 +18,4 @@
 
 生成成功。
 
-已用时间 00:00:00.17
+已用时间 00:00:01.95

@@ -1,8 +1,12 @@
 #include <stdio.h>
 
+#include "wang.h"
 
-int main(int argc , char** argv){
-	printf("hello\n");
-
-	return 0;
+_declspec(dllexport) int setup(){
+	printf("setup...\n");
+	return 10;
+}
+_declspec(dllexport) int tearup(){
+	printf("setup...\n");
+	return 20;
 }

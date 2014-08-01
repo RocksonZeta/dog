@@ -7,6 +7,8 @@
 //#pragma comment(lib, "dog.lib")
 //隐式DLL可执行模块中也必须声明DLL导入函数
 
+_declspec(dllimport) int setup();
+
 _declspec(dllexport) int add(int a, int b);
 _declspec(dllimport) int SetHook();
 _declspec(dllimport) int StopHook();
@@ -28,17 +30,26 @@ void setup_hook(){
 }
 
 
-int main(int argc, char *argv[])
-{
+void test_db(){
 	init_db();
 	message m = { 0 };
-	strcpy_s(m.app_name,5, "app2");
-	strcpy_s(m.win_name,5, "win2");
+	strcpy_s(m.app_name, 5, "app2");
+	strcpy_s(m.win_name, 5, "win2");
 	m.at = 10000;
 	save_message(m);
 	get_messages('1');
-	
+
 	close_db();
+}
+
+void test_bark(){
+	setup();
+}
+
+int main(int argc, char *argv[])
+{
+	//test_bark();
+	setup_hook();
 	system("pause");
 		
 	return 0;
