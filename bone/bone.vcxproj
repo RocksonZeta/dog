@@ -143,17 +143,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dll_init.c" />
+    <ClCompile Include="nose.c" />
     <ClCompile Include="log.c" />
     <ClCompile Include="shell.c" />
     <ClCompile Include="sqlite.c" />
     <ClCompile Include="sqlite3.c" />
+    <ClCompile Include="str_trans.c" />
     <ClCompile Include="time.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="nose.h" />
     <ClInclude Include="log.h" />
     <ClInclude Include="sqlite.h" />
     <ClInclude Include="sqlite3.h" />
     <ClInclude Include="sqlite3ext.h" />
+    <ClInclude Include="str_trans.h" />
     <ClInclude Include="time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

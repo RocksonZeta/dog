@@ -1,10 +1,10 @@
 /**
 	set up windows hook
 */
-_declspec(dllexport) int unleash_dog();
+_declspec(dllexport) int play();
 
 
 /**
 tear up windows hook
 */
-_declspec(dllexport) int leash_dog();
+_declspec(dllexport) int sleep();

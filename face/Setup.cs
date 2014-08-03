@@ -9,10 +9,14 @@ namespace face
 {
     class Setup
     {
-        [DllImport("bark.dll", EntryPoint = "setup", CharSet = CharSet.Ansi,CallingConvention=CallingConvention.StdCall)]
-        public static extern int setup();
+        [DllImport("dog32.dll", EntryPoint = "watch32", CharSet = CharSet.Ansi,CallingConvention=CallingConvention.StdCall)]
+        public static extern int watch32();
 
-        [DllImport("bark.dll", EntryPoint = "tearup", CharSet = CharSet.Ansi)]
-        public static extern int tearup();
+        [DllImport("dog32.dll", EntryPoint = "unwatch32", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int unwatch32();
+
+        [DllImport("dog32.dll", EntryPoint = "get_system_bits", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
+        public static extern int get_system_bits();
+
     }
 }

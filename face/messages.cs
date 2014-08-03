@@ -7,6 +7,10 @@ using System.Data.SQLite;
 using System.Data;
 
 
+/**
+ * select m.id,m.app_name,m.win_name,(m.at-pre.at)/1000 as t from messages m left join (select id+1 as id ,at  from messages) pre on m.id=pre.id
+ * 
+ */
 namespace face
 {
     class Messages
@@ -17,19 +21,30 @@ namespace face
         DataSet ds = new DataSet();
         DataTable dt = new DataTable();
 
+        string db_path = System.Environment.GetEnvironmentVariable("APPDATA") + "\\ququ\\dog.sqlite";
+
 
         public static Messages instance = new Messages();
 
         private Messages()
         {
-            con = new SQLiteConnection("Data Source=d:\\ququ.db");
+            try
+            {
+
+                con = new SQLiteConnection("Data Source=" + db_path + ";Version=3;New=False;Compress=True;");
             con.Open();
             cmd = con.CreateCommand();
+            }
+            catch (Exception e)
+            {
+                
+            }
+
         }
         private void SetConnection()
         {
             con = new SQLiteConnection
-                ("Data Source=ququ.db;Version=3;New=False;Compress=True;");
+                ("Data Source=" + db_path + ";Version=3;New=False;Compress=True;");
         } 
         private void ExecuteQuery(string txtQuery)
         {

@@ -30,6 +30,15 @@
     <ClCompile Include="time.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="nose.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dll_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="str_trans.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="log.h">
@@ -45,6 +54,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="str_trans.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -146,23 +146,13 @@
     <ClCompile Include="test.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bark\bark.vcxproj">
-      <Project>{91f25e77-d834-41a9-baf5-5e7ad33f7d8f}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\bone\bone.vcxproj">
       <Project>{dc854567-3691-4cff-ba9b-d4c455d45786}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\dog32\dog32.vcxproj">
-      <Project>{cf62bdae-5416-4a10-b754-d7b7d9f6cc76}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\dog64\dog64.vcxproj">
-      <Project>{7bac4c45-ed8c-4001-adf2-d9884063bc82}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\doghouse\doghouse.vcxproj">
-      <Project>{f33668b3-d90b-44c7-9729-3d9bce8e546f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\dog\dog.vcxproj">
-      <Project>{64da2ee6-1f9c-439a-9491-7248becaa59e}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

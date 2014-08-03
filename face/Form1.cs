@@ -53,13 +53,25 @@ namespace face
 
         private void setup_Click(object sender, EventArgs e)
         {
-            int r = Setup.setup();
-            tb_console.Text += "setup " + r + Environment.NewLine;
+            int r = Setup.watch32();
+            int os_bit = Setup.get_system_bits();
+            if (64 == os_bit)
+            {
+                log("system is 64 bit system");
+            }
+            log("hahaah");
+
+            tb_console.Text += "os "+os_bit+" ,setup " + r + Environment.NewLine;
         }
 
         private void btn_tearup_Click(object sender, EventArgs e)
         {
-            int r = Setup.tearup();
+            int r = Setup.unwatch32();
+            int os_bit = Setup.get_system_bits();
+            if (64 == os_bit)
+            {
+                
+            }
             tb_console.Text += "tearup " + r + Environment.NewLine;
         }
 
@@ -94,12 +106,12 @@ namespace face
 
         private void btn_load_MouseClick(object sender, MouseEventArgs e)
         {
-            Messages.instance.LoadData(tb_messages );
+            
         }
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-
+            Messages.instance.LoadData(tb_messages);
         }
 
 

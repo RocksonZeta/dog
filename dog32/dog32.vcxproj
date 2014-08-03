@@ -38,7 +38,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)face\bin\Debug\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -64,12 +67,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bone\bone.vcxproj">
-      <Project>{dc854567-3691-4cff-ba9b-d4c455d45786}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\bone\log.c" />
+    <ClCompile Include="..\bone\nose.c" />
+    <ClCompile Include="..\bone\shell.c" />
+    <ClCompile Include="..\bone\sqlite.c" />
+    <ClCompile Include="..\bone\sqlite3.c" />
+    <ClCompile Include="..\bone\str_trans.c" />
+    <ClCompile Include="..\bone\time.c" />
+    <ClCompile Include="dog32.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dog32.c" />
+    <ClInclude Include="..\bone\log.h" />
+    <ClInclude Include="..\bone\nose.h" />
+    <ClInclude Include="..\bone\sqlite.h" />
+    <ClInclude Include="..\bone\sqlite3.h" />
+    <ClInclude Include="..\bone\sqlite3ext.h" />
+    <ClInclude Include="..\bone\str_trans.h" />
+    <ClInclude Include="..\bone\time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

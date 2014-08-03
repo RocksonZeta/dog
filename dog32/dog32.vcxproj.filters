@@ -18,5 +18,49 @@
     <ClCompile Include="dog32.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\bone\log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bone\shell.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bone\sqlite.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bone\sqlite3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bone\time.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bone\nose.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bone\str_trans.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bone\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bone\sqlite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bone\sqlite3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bone\sqlite3ext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bone\time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bone\nose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bone\str_trans.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -55,7 +55,7 @@
             this.tb_console.Location = new System.Drawing.Point(29, 76);
             this.tb_console.Multiline = true;
             this.tb_console.Name = "tb_console";
-            this.tb_console.Size = new System.Drawing.Size(481, 90);
+            this.tb_console.Size = new System.Drawing.Size(583, 90);
             this.tb_console.TabIndex = 1;
             // 
             // label1
@@ -104,7 +104,6 @@
             this.btn_load.Text = "load";
             this.btn_load.UseVisualStyleBackColor = true;
             this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
-            this.btn_load.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_load_MouseClick);
             // 
             // fm_dog
             // 
